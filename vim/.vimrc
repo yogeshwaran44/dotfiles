@@ -14,6 +14,9 @@ Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'instant-markdown/vim-instant-markdown'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 
@@ -90,3 +93,6 @@ inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 "set mouse=a
 
+
+"let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#branch#enabled = 1
