@@ -8,7 +8,6 @@ Plug 'ap/vim-css-color'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'vim-python/python-syntax'
 Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -81,6 +80,7 @@ inoremap <C-s> <Esc>:w<CR>i
 " NERDTree folder color
 highlight NERDTreeDir guifg=#3ecdde
 highlight NERDTreeExecFile guifg=#87af87 
+let NERDTreeChDirMode=2
 
 
 " Use <CR> to confirm completion, or insert newline if no completion popup
@@ -93,6 +93,25 @@ inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 "set mouse=a
 
+nnoremap <leader>f :Files<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>r :Rg<CR>
+
 
 "let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 1
+
+
+autocmd FileType css,html setlocal nosmartindent
+
+
+" Change cwd to the directory of the file you open in NERDTree
+autocmd BufEnter * if &filetype ==# 'nerdtree' | setlocal bufhidden=wipe | endif
+autocmd BufEnter * silent! lcd %:p:h
+
+" HTML template for new files
+augroup html_template
+  autocmd!
+  autocmd BufNewFile *.html 0r ~/.vim/templates/skeleton.html
+augroup END
+
