@@ -7,7 +7,7 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias live='live-server'
+alias live='live-server --port=5500'
 alias pingme='ping yogeshwaran.xyz'
 alias update='sudo pacman -Syu && yay -Syu'
 #alias clean='sudo pacman -Rns $(pacman -Qdtq) && sudo paccache -r && yay -Ycns --ask'
@@ -15,15 +15,22 @@ alias clean='sudo pacman -Rns $(pacman -Qdtq) && sudo paccache -r && yay -Sc --n
 alias maria='sudo mariadb -u root -p'
 alias postgres='sudo -iu postgres psql'
 alias data="vnstat -i wlan0 -d"
-
+alias cal="calcurse"
+alias telegram-desktop='Telegram'
 
 #PS1='[\u@\h \W]\$ '
 PS1='\[\e[1;38;5;44m\][\u@\h \W]\$\[\e[0m\] '
 
 
 export TERMINAL=alacritty
-
+export EDITOR=vim
 
 export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
 export PATH="$HOME/bin:$JAVA_HOME/bin:$PATH"
+
+
+export HISTCONTROL=ignoredups:erasedups
+export HISTSIZE=5000
+export HISTFILESIZE=10000
+shopt -s histappend
 
