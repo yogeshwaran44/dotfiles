@@ -1,0 +1,33 @@
+  {
+  "java.jdt.ls.java.home": "/usr/lib/jvm/java-21-openjdk",
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-21",
+      "path": "/usr/lib/jvm/java-21-openjdk",
+      "default": true
+    }
+  ],
+  "java.import.maven.enabled": true,
+  "java.import.gradle.enabled": true,
+  "java.format.enabled": true,
+  "java.completion.enabled": true,
+  "java.saveActions.organizeImports": true,
+  "java.referencesCodeLens.enabled": true,
+  "java.implementationsCodeLens.enabled": true,
+  "java.references.includeDecompiledSources": true,
+  "java.inlayHints.parameterNames.enabled": "all",
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.completion.importOrder": ["java", "javax", "org", "com"],
+
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "css": "css",
+    "javascript": "javascript",
+    "javascriptreact": "javascriptreact",
+    "typescript": "typescript",
+    "typescriptreact": "typescriptreact"
+  },
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.colorDecorators": true
+}
+
