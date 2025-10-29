@@ -4,6 +4,7 @@ general {
 }
 order += "brightness"
 order += "cpu_usage"
+order += "ethernet enp1s0"
 order += "wireless _first_"
 order += "cpu_temperature 0"
 order += "load"
@@ -14,8 +15,13 @@ order += "tztime local"
 
 
 wireless _first_ {
-  format_up = "NET %quality"
+  format_up = "NET %quality - %essid"
   format_down = "NET DOWN"
+}
+
+ethernet enp1s0 {
+   format_up = "ETH UP"
+   format_down = "ETH DN"
 }
 
 cpu_usage {
