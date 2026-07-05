@@ -16,6 +16,7 @@ Plug 'instant-markdown/vim-instant-markdown'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'v0lkc/cds.vim'
 call plug#end()
 
 
